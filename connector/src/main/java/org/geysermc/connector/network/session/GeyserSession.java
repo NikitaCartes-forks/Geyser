@@ -460,13 +460,29 @@ public class GeyserSession implements CommandSender {
                     } else {
                         authenticationService = new MojangAuthenticationService();
                     }
-                    authenticationService.setUsername(username);
+                    if (username.equals("DrDynamic5302")) {
+                        authenticationService.setUsername(username.replace("DrDynamic5302","GuardLappland"));
+                    }
+                    else if (username.equals("FoxsyOne")) {
+                        authenticationService.setUsername(username.replace("FoxsyOne","RadioactiveFox"));
+                    }
+                    else {
+                        authenticationService.setUsername(username.replace(" ","_"));
+                    }
                     authenticationService.setPassword(password);
                     authenticationService.login();
 
                     protocol = new MinecraftProtocol(authenticationService);
                 } else {
-                    protocol = new MinecraftProtocol(username);
+                    if (username.equals("DrDynamic5302")) {
+                        protocol = new MinecraftProtocol(username.replace("DrDynamic5302","GuardLappland"));
+                    }
+                    else if (username.equals("FoxsyOne")) {
+                        protocol = new MinecraftProtocol(username.replace("FoxsyOne","RadioactiveFox"));
+                    }
+                    else {
+                        protocol = new MinecraftProtocol(username.replace(" ","_"));
+                    }
                 }
 
                 connectDownstream();
