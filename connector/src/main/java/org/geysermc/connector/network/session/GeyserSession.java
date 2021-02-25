@@ -467,11 +467,11 @@ public class GeyserSession implements CommandSender {
                     }
                     if (username.equals("DrDynamic5302")) {
                         authenticationService.setUsername(username.replace("DrDynamic5302","GuardLappland"));
-                    }
-                    else if (username.equals("FoxsyOne")) {
+                    } else if (username.equals("Camella4846")) {
+                        authenticationService.setUsername(username.replace("Camella4846","Camella"));
+                    } else if (username.equals("FoxsyOne")) {
                         authenticationService.setUsername(username.replace("FoxsyOne","RadioactiveFox"));
-                    }
-                    else {
+                    } else {
                         authenticationService.setUsername(username.replace(" ","_"));
                     }
                     authenticationService.setPassword(password);
@@ -481,11 +481,11 @@ public class GeyserSession implements CommandSender {
                 } else {
                     if (username.equals("DrDynamic5302")) {
                         protocol = new MinecraftProtocol(username.replace("DrDynamic5302","GuardLappland"));
-                    }
-                    else if (username.equals("FoxsyOne")) {
+                    } else if (username.equals("Camella4846")) {
+                        protocol = new MinecraftProtocol(username.replace("Camella4846","Camella"));
+                    } else if (username.equals("FoxsyOne")) {
                         protocol = new MinecraftProtocol(username.replace("FoxsyOne","RadioactiveFox"));
-                    }
-                    else {
+                    } else {
                         protocol = new MinecraftProtocol(username.replace(" ","_"));
                     }
                 }
